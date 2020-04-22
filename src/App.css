@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+html *{
+  font-family: 'Quicksand', Helvetica, sans-serif;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  display: grid;
+  grid-template-columns: 300px auto;
+  box-sizing: border-box;
+  font-size: 30px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.side{
+  grid-column: 1;
+  background-color: #2D2D2D;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.side a{
+  text-decoration: none;
+  color: #EFEFEF;
 }
+.side ul{
+  color: #EFEFEF;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.side ul li{
+  padding: 20px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 35px;
+}
+.side ul li:hover{
+  background-color: rgb(66, 66, 66);
+
+}
+.main{
+  grid-column: 2;
+  background-color: #E5E5E5;
+}
+.top-bar{
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  color: #2D2D2D;
+}
+.main table{
+  margin: 20px;
+  padding: 40px;
+  background-color: white;
+  text-align: left;
+  border-collapse: collapse;
+}
+.main table td,th{
+  border: 1px solid black;
+  padding: 10px;
+}
+.main input{
+  margin: 0;
+  padding: 10px;
+}
+.main table button{
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(212, 212, 212);
+}
+.main table button:hover{
+  background-color: #EFEFEF;
+  cursor: pointer;
+}
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  transform: translate(-50%,-50%);
+  border: 0.2px solid black;
+  padding: 10px;
+}
+.modal button{
+  position: fixed;
+  top: 5px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-weight: 800;
+  font-size: 25px;
+  color: rgb(90, 90, 90);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  
+}
+.modal button:hover{
+  cursor: pointer;
 }
